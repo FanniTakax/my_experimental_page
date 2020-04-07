@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/github.io/my_experimental_page/static/css/main.24791fe7.chunk.css",
-    "main.js": "/github.io/my_experimental_page/static/js/main.548c4c16.chunk.js",
-    "main.js.map": "/github.io/my_experimental_page/static/js/main.548c4c16.chunk.js.map",
-    "runtime-main.js": "/github.io/my_experimental_page/static/js/runtime-main.9881b8ac.js",
-    "runtime-main.js.map": "/github.io/my_experimental_page/static/js/runtime-main.9881b8ac.js.map",
-    "static/js/2.6d991b3e.chunk.js": "/github.io/my_experimental_page/static/js/2.6d991b3e.chunk.js",
-    "static/js/2.6d991b3e.chunk.js.map": "/github.io/my_experimental_page/static/js/2.6d991b3e.chunk.js.map",
-    "index.html": "/github.io/my_experimental_page/index.html",
-    "precache-manifest.5e91fc8b23d93846071711f46b0621b4.js": "/github.io/my_experimental_page/precache-manifest.5e91fc8b23d93846071711f46b0621b4.js",
-    "service-worker.js": "/github.io/my_experimental_page/service-worker.js",
-    "static/css/main.24791fe7.chunk.css.map": "/github.io/my_experimental_page/static/css/main.24791fe7.chunk.css.map",
-    "static/js/2.6d991b3e.chunk.js.LICENSE.txt": "/github.io/my_experimental_page/static/js/2.6d991b3e.chunk.js.LICENSE.txt"
+    "main.css": "/my_experimental_page/static/css/main.24791fe7.chunk.css",
+    "main.js": "/my_experimental_page/static/js/main.ad1bb7c7.chunk.js",
+    "main.js.map": "/my_experimental_page/static/js/main.ad1bb7c7.chunk.js.map",
+    "runtime-main.js": "/my_experimental_page/static/js/runtime-main.d1f48c7d.js",
+    "runtime-main.js.map": "/my_experimental_page/static/js/runtime-main.d1f48c7d.js.map",
+    "static/js/2.6d991b3e.chunk.js": "/my_experimental_page/static/js/2.6d991b3e.chunk.js",
+    "static/js/2.6d991b3e.chunk.js.map": "/my_experimental_page/static/js/2.6d991b3e.chunk.js.map",
+    "index.html": "/my_experimental_page/index.html",
+    "precache-manifest.89d2957dff6068ed0501469b6a543ded.js": "/my_experimental_page/precache-manifest.89d2957dff6068ed0501469b6a543ded.js",
+    "service-worker.js": "/my_experimental_page/service-worker.js",
+    "static/css/main.24791fe7.chunk.css.map": "/my_experimental_page/static/css/main.24791fe7.chunk.css.map",
+    "static/js/2.6d991b3e.chunk.js.LICENSE.txt": "/my_experimental_page/static/js/2.6d991b3e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.9881b8ac.js",
+    "static/js/runtime-main.d1f48c7d.js",
     "static/js/2.6d991b3e.chunk.js",
     "static/css/main.24791fe7.chunk.css",
-    "static/js/main.548c4c16.chunk.js"
+    "static/js/main.ad1bb7c7.chunk.js"
   ]
 }
