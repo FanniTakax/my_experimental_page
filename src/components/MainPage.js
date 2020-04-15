@@ -29,7 +29,7 @@ const MainPage = () => {
 // megjelenitendoket kulon objectben tarolni
 
   return (
-    <div className="main -page">
+    <div className="main-page">
       <h2>Tea 101</h2>
       <Button buttonName={'What is Tea'} onClick={() => handleClick(0, state)} />
       <Button buttonName={'What is White Tea?'}  onClick={() => handleClick(1)} />
