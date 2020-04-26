@@ -17,8 +17,8 @@ function App() {
           <MainPage/>
         </Route>
         <Route path="*">
-            <NoMatch />
-          </Route>
+          <LandingPage />
+        </Route>
       </Switch>
     </Router>
   );
