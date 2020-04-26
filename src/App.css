@@ -1,11 +1,16 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
   text-align: center;
+}
+.title-h {
+  margin: 0;
+  padding: 25px;
+  color: rgb(2, 32, 252);
 }
 
 div .landing-page {
-  color: rgb(2, 32, 252);
-  height: 99vh; 
-  width: 99vw;
+  height: 100vh; 
   background: url(img/01.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -13,7 +18,13 @@ div .landing-page {
   background-size: cover;
 }
 
-div .main-page {
-  background-color: rgb(172, 127, 220);
+.main-page {
+  background-color: rgb(193, 171, 218);
   height:100vh;
+}
+
+.nav-main-link {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
 }
