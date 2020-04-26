@@ -2,7 +2,7 @@ import React from 'react';
 
 const Ginger = () => {
     return (
-        <p>Ginger root is yummy.</p>
+        <p className="main-page-content">Ginger root is yummy.</p>
     );
 }
 

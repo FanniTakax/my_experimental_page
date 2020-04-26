@@ -2,7 +2,7 @@ import React from 'react';
 
 const Ginseng = () => {
     return (
-        <p>Ginzeng, az ero bennem megin zeng.</p>
+        <p className="main-page-content">Ginzeng, az ero bennem megin zeng.</p>
     );
 }
 

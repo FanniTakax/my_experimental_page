@@ -2,7 +2,7 @@ import React  from 'react';
 
 const Kapalabhati = () => {
     return (
-        <p>Kapalabhati pranayama.</p>
+        <p className="main-page-content">Kapalabhati pranayama.</p>
     );
 }
 
