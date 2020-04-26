@@ -3,6 +3,13 @@ body {
   padding: 0;
   text-align: center;
 }
+button {
+  background-color: rgba(245, 244, 247, 0.432);
+  color: rgb(0, 7, 61);
+  padding: 10px;
+  margin: 10px;
+}
+
 .title-h {
   margin: 0;
   padding: 25px;
@@ -27,4 +34,6 @@ div .landing-page {
   text-decoration: none;
   color: white;
   padding: 20px;
+  font-weight: bold;
+  
 }
