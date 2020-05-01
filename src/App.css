@@ -4,7 +4,7 @@ body {
   text-align: center;
 }
 button {
-  background-color: rgba(193, 171, 218, 0.8);
+  background-color: rgba(126, 197, 45, 0.8);
   border: none;
   cursor: pointer;
   color: white;
@@ -16,22 +16,25 @@ button {
 .title-h {
   margin: 0;
   padding: 25px;
-  color: rgb(2, 32, 252);
+  color: rgb(0, 0, 0);
   text-decoration: underline;
 }
 
+/* LANDING PAGE */
 div .landing-page {
   height: 100vh; 
-  background: url(img/01.jpg) no-repeat center center fixed;
+  /*background: url(img/01.jpg) no-repeat center center fixed;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
+
+/* MAIN PAGE / GENERAL */
 .main-page {
   height:100vh;
-  background: url(img/01.jpg) no-repeat center center fixed;
+  /*background: url(img/01.jpg) no-repeat center center fixed;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -40,7 +43,7 @@ div .landing-page {
 }
 
 .nav-main {
-  background-color: rgb(193, 171, 218, 0.8);
+  background-color: rgba(49, 54, 42, 0.8);
   padding: 10px;
 }
 
@@ -52,7 +55,24 @@ div .landing-page {
 }
 
 .main-page-content {
-  margin: 0;
+  margin: 10px auto;
   padding: 20px;
-  background-color: rgb(193, 171, 218, 0.8);
+  background-color: #c5c5c2b2;
 }
+
+
+/* MAIN PAGE / LEAVE A THOUGHT  */
+.thoughts {
+  background-color: #c5c5c2b2;
+  margin: 10px auto;
+  width: 400px;
+}
+.thought-form {
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  
+  
+}
+
