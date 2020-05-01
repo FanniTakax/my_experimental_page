@@ -1,18 +1,41 @@
 import React, { useState, useEffect } from 'react';
+import database from '../../../firebase/firebase';
 
 const ThoughtForm = () => {
-    return (
-        /*<form>
-            <input type="text" value={state.thought} name="thought" onChange={handleChange }  required/> <br/>
-            <button type="submit">Add Thought</button>
-        </form>*/
 
-        <div className="thought-form">
-            <label for="thought">Write a thought and leave it here to inspire us: </label>
-            <textarea name="thought" placeholder="Write here a thought" rows="7" cols="40" required></textarea>
-            <input type="text" name="name" placeholder="Your name" />
+    const [state, setState] = useState({
+        thought: '',
+        name: ''
+    })
+
+    const addThought = (thought, name) => {
+        database.ref('thoughts').push({
+            thought: thought,
+            name: name
+        })
+    }
+
+    const handleChange = (e) => {
+        setState({...state, [e.target.name]: e.target.value})
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        addThought(state.thought, state.name);
+        setState({
+            thought: '',
+            name: ''
+        });
+    }
+    
+
+    return (
+        <form className="thought-form" onSubmit={handleSubmit}>
+            <label htmlFor="thought">Write a thought and leave it here to inspire us: </label>
+            <textarea name="thought" value={state.thought} onChange={handleChange} placeholder="Write here a thought" rows="7" cols="40" required></textarea>
+            <input type="text" name="name" value={state.name} onChange={handleChange} placeholder="Your name" />
             <button type="submit">Add Thought</button>
-        </div>
+        </form>
     )
 }
 

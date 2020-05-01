@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import LandingPage from './components/LandingPage'
 import MainPage from './components/MainPage'
-import NoMatch from './components/NoMatch'
 
 function App() {
   return (
