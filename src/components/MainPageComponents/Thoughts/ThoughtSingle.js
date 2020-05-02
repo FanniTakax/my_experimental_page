@@ -1,12 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React/*, { useState, useEffect }*/ from 'react';
 
-const ThoughtSingle = () => {
+const ThoughtSingle = (props) => {
+    console.log(props.thoughtsArray)
+    const array = props.thoughtsArray
+    console.log(array)
+    /*const list = props.thoughtsArray.map((item) => {
+        return <li> {item.name} </li>;
+    })*/
+
+    const list = array.map((item) => <li>hello</li>)
+
     return (
-     <div>
-        <p>Energy flows where your attention goes.</p> 
-        <span>Anonymus</span>
-     </div>
+     <ul className="thoughts-render">
+        {list}
+     </ul>
     )
 }
+
+/*<li key={thought.id}><span>{thought.thought}</span><span>{thought.name}</span></li>)*/
 
 export default ThoughtSingle;
