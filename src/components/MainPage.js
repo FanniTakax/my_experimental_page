@@ -12,7 +12,7 @@ const MainPage = () => {
 const history = useHistory();
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="main-page">
         <h2 className='title-h'>Thingies I do</h2>
         <nav className='nav-main'>
@@ -23,21 +23,13 @@ const history = useHistory();
         </nav>
 
         <Switch>
-          <Route path="/main/ginger">
-            <Ginger />
-          </Route>
-          <Route path="/main/ginseng">
-            <Ginseng />
-          </Route>
-          <Route path="/main/kombucha">
-            <Kombucha />
-          </Route>
-          <Route path="/main/thoughts">
-            <Thoughts />
-          </Route>
+          <Route path="/main/ginger" render={(routerProps) => <Ginger routerProps={routerProps}/>}></Route>
+          <Route path="/main/ginseng" render={(routerProps) => <Ginseng routerProps={routerProps}/>} ></Route>
+          <Route path="/main/kombucha" render={(routerProps) => <Kombucha routerProps={routerProps}/>} ></Route>
+          <Route path="/main/thoughts" render={(routerProps) => <Thoughts routerProps={routerProps}/>}  ></Route>
         </Switch>
         
-        <Button buttonName={'Back to the Landing Page'} onClick={() => history.push('/home')} />
+        <Button buttonName={'Back to the Landing Page'} onClick={() => history.push('/')} />
       </div>
     </Router>
   );

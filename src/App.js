@@ -7,17 +7,11 @@ import MainPage from './components/MainPage'
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
-        <Route path='/home'>
-          <LandingPage />
-        </Route>
-        <Route path='/main'>
-          <MainPage/>
-        </Route>
-        <Route path="*">
-          <LandingPage />
-        </Route>
+        <Route exact path='/' exact render={(routerProps) => <LandingPage routerProps={routerProps}/>}></Route>
+        <Route path='/main' render={(routerProps) => <MainPage routerProps={routerProps}/>}></Route>
+        <Route component={LandingPage}></Route>
       </Switch>
     </Router>
   );
