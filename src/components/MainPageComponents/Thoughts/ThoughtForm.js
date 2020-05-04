@@ -2,9 +2,6 @@ import React from 'react';
 
 
 const ThoughtForm = (props) => {
-
-  
-
     return (
         <form className="thought-form" onSubmit={props.handleFormSubmit}>
             <label htmlFor="thought">Write a thought and leave it here to inspire us: </label>

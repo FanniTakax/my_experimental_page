@@ -6,7 +6,7 @@ import ThoughtSingle from './Thoughts/ThoughtSingle';
 const Thoughts = () => {
       // Get thoughts data from database
       const getThoughtsArray = () => {
-        const array = []
+        let array = []
         database.ref('thoughts')
             .once('value')
             .then((dataSnapshot) => { 
@@ -20,11 +20,14 @@ const Thoughts = () => {
         return array
     }
 
+    
     const [thoughtsArray, setThoughtsArray] = useState(getThoughtsArray())
+
 
     // After first render, load thought objects from the database
     useEffect(() => {
-        console.log(thoughtsArray)       
+        console.log(thoughtsArray)
+             
     }, [])
 
 
@@ -51,13 +54,18 @@ const Thoughts = () => {
         });
     }
 
+
+// thoughtsArray.map((item) => {return <ThoughtSingle key={item.id} name={item.name} thought={item.thought} />})
     
     
 
     return (
         <div className="thoughts">
             <ThoughtForm thought={thought} handleFormChange={handleFormChange} handleFormSubmit={handleFormSubmit} />
-            <ThoughtSingle thoughtsArray={thoughtsArray} />
+            <ol className='thoughts-list'>
+                <ThoughtSingle key={1} name={'Fannno'} thought={'keep on keep on keep on loving loving'} />
+            </ol>
+            
         </div>
     );
 }
