@@ -74,9 +74,6 @@ div .landing-page {
   padding: 0 1rem;
 }
 .thought-form {
-  /*display: flex;
-  flex-direction: column;
-  align-items: center;*/
   padding: 1rem;
   margin: 1rem 0;
   display: grid;
