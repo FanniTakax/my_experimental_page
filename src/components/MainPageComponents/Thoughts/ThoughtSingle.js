@@ -2,7 +2,10 @@ import React from 'react';
 
 const ThoughtSingle = (props) => {
     return (
-     <li key={props.key}><p>{props.thought}</p><span>{props.name}</span></li>
+     <li className="thought-single" key={props.key}>
+        <p className="thought-single-p">{props.thought}</p>
+        <span className="thought-single-span">{props.name}</span>
+    </li>
     )
 }
 

@@ -1,3 +1,11 @@
+:root {
+  --greyDark: rgba(27, 27, 26, 0.8);
+  --greyMiddle: rgba(49, 54, 42, 0.8);
+  --greyContent: #eeeeeeb2;
+ 
+}
+
+
 body {
   margin: 10vh 20vw;
   padding: 0;
@@ -7,40 +15,31 @@ button {
   background-color: white;/*rgba(126, 197, 45, 0.8);*/
   border: none;
   cursor: pointer;
-  color: rgba(49, 54, 42, 0.8);
+  color: var(--greyMiddle);
   font-weight: bold;
   padding: 1rem;
   margin: 2rem;
 }
+button:hover {
+  color: var(--greyDark);
+
+}
 
 .title-h {
   margin: 0;
-  color: rgb(76, 80, 71);
-  text-shadow: 1px 1px rgba(117, 119, 114, 0.5);
-  text-decoration: underline;
+  color: var(--greyMiddle);
 }
 
 /* LANDING PAGE */
 div .landing-page {
   height: 100vh; 
   margin-top: 30vh;
-  /*background: url(img/01.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;*/
 }
 
 
 /* MAIN PAGE / GENERAL */
 .main-page {
   height:100vh;
-  /*background: url(img/01.jpg) no-repeat center center fixed;*/
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  /**/
 }
 
 .nav-main {
@@ -50,27 +49,65 @@ div .landing-page {
 
 .nav-main-link {
   text-decoration: none;
-  color: rgba(49, 54, 42, 0.8);
+  color: var(--greyMiddle);
   padding: 20px;
   font-weight: bold; 
 }
+.nav-main-link:hover {
+  color: var(--greyDark);
+}
 
 .main-page-content {
-  margin: 10px auto;
-  padding: 20px;
-  background-color: #c5c5c2b2;
+  width: 60%;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: var(--greyContent);
 }
 
 
 /* MAIN PAGE / LEAVE A THOUGHT  */
-.thoughts {
-  background-color: #c5c5c2b2;
-  margin: 10px auto;
-  width: 400px;
+
+.thoughts > p {
+  margin-bottom: 1rem;
+}
+.thoughts-list {
+  padding: 0 1rem;
 }
 .thought-form {
-  display: flex;
+  /*display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;*/
+  padding: 1rem;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 1rem;
+}
+ .thought-form-div {
+   display: grid;
+   grid-template-rows: 1fr 1fr;
+   grid-template-columns: 1fr;
+ }
+
+.thought-form-div > input {
+  height: 3vh;
+}
+.thought-form-div > button {
+  margin: 0;
+  background-color: var(--greyContent);
 }
 
+.thought-single {
+  list-style: none;
+  padding: 1rem;
+  margin: 2rem 0;
+  border: solid 1px rgba(148, 150, 145, 0.8);
+}
+
+.thought-single > .thought-single-p {
+  text-align: left;
+}
+.thought-single > .thought-single-span {
+  text-align: right;
+  font-size: 0.8rem;
+}

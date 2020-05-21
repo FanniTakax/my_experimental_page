@@ -58,19 +58,24 @@ const Thoughts = () => {
 
     
     const tibidubu = [
-        {id: 1, name: 'Lalika', thought: 'vlami valahol valamikor'},
-        {id: 2, name: 'Barbie', thought: 'where are my shoes'}
+        {id: '1', name: 'Lalika', thought: 'vlami valahol valamikor'},
+        {id: '2', name: 'Barbie', thought: 'where are my shoes'},
+        {id: '3', name: 'Geza', thought: 'fekete bika pata kopog a patika epita koven'},
+        {id: '4', name: 'Simonka a cica', thought: 'Prrrrr prrp prrrr prrr grrrrr meeeeeooooooowwwwww wwwweeeeeiiii prrrrrr prrrrr'}
     ]
     console.log({tibidubu})
 
     return (
-        <div className="thoughts">
+        <div className="thoughts main-page-content">
+            <p>Write a thought. Any Thought. To inspire each other.</p>
             <ThoughtForm thought={thought} handleFormChange={handleFormChange} handleFormSubmit={handleFormSubmit} />
-            <ol className='thoughts-list'>
+            <ul className='thoughts-list'>
                 {
-                    database.ref('thoughts').on('value', (dataThoughts) => dataThoughts.forEach((data) => <ThoughtSingle key={data.key} name={data.val().name} thought={data.val().thought} />))
+                    tibidubu.map((item) => {
+                        return <ThoughtSingle key={item.id} name={item.name} thought={item.thought} />
+                    })
                 }
-            </ol>
+            </ul>
             
         </div>
     );
