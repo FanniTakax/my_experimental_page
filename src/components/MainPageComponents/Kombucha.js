@@ -2,7 +2,7 @@ import React from 'react';
 
 const Kombucha = () => {
     return (
-        <p className="main-page-content">Tea.</p>
+        <p className="main-page-content">CV </p>
     );
 }
 

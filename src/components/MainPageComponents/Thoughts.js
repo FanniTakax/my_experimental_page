@@ -5,8 +5,10 @@ import ThoughtSingle from './Thoughts/ThoughtSingle';
 import _ from 'lodash';
 
 const Thoughts = () => {
-      // Get thoughts data from database
-      const getThoughtsArray = () => {
+    
+     
+    // Get thoughts data from database
+    const getThoughtsArray = () => {
         let array = []
         database.ref('thoughts')
             .once('value')
@@ -20,19 +22,17 @@ const Thoughts = () => {
             })   
         return array
     }
-
     
-    const [thoughtsArray, setThoughtsArray] = useState(getThoughtsArray())
-
+    const [thoughtsArray, setThoughtsArray] = useState(getThoughtsArray)
 
     // After first render, load thought objects from the database
     useEffect(() => {
-        
-         console.log(thoughtsArray)    
+        console.log({thoughtsArray})    
+        console.log(thoughtsArray)
     }, [])
+    
 
-
-    // props sent to ThoughtsForm
+    // props sent to ThoughtsForm ------------------------------------------------------------------------
     const [thought, setThought] = useState({
         thought: '',
         name: ''
@@ -54,32 +54,22 @@ const Thoughts = () => {
             name: ''
         });
     }
-
-   
-        /*let arrayOfThoughts = []
-        arrayOfThoughts = database.ref('thoughts').on('value', (snapshot) => {
-            const data = snapshot.val()
-            let array = []
-            _.map(data, item => {
-                //console.log(`id: ${item.key}, name: ${item.name}, thought: ${item.thought} ...... `)
-                array.push(<ThoughtSingle name={'Fannno'} thought={'keep on keep on keep on loving loving'} />)
-                
-            })
-            return array
-        })*/
-    
+    // ---------------------------------------------------------------------------------------------------------
 
     
-
-// thoughtsArray.map((item) => {return <ThoughtSingle key={item.id} name={item.name} thought={item.thought} />})
-    
-    
+    const tibidubu = [
+        {id: 1, name: 'Lalika', thought: 'vlami valahol valamikor'},
+        {id: 2, name: 'Barbie', thought: 'where are my shoes'}
+    ]
+    console.log({tibidubu})
 
     return (
         <div className="thoughts">
             <ThoughtForm thought={thought} handleFormChange={handleFormChange} handleFormSubmit={handleFormSubmit} />
             <ol className='thoughts-list'>
-                <ThoughtSingle id={1} name={'Fannno'} thought={'keep on keep on keep on loving loving'} />
+                {
+                    database.ref('thoughts').on('value', (dataThoughts) => dataThoughts.forEach((data) => <ThoughtSingle key={data.key} name={data.val().name} thought={data.val().thought} />))
+                }
             </ol>
             
         </div>
