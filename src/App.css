@@ -108,3 +108,54 @@ div .landing-page {
   text-align: right;
   font-size: 0.8rem;
 }
+
+/* ----------------------------------------------------------------- */
+
+@media only screen and (max-width: 1024px) {
+  body {
+    margin: 10vh 10vw;
+
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main-page-content {
+    width: 90%;
+  }
+  .nav-main-link {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 5vh 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .nav-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .thought-form {
+    padding: 1rem;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+   .thought-form-div {
+     display: grid;
+     grid-template-rows: 1fr 1fr;
+   }
+  
+  .thought-form-div > input {
+    height: 3vh;
+  }
+  .thought-form-div > button {
+    margin: 0;
+    background-color: var(--greyContent);
+  }
+}
