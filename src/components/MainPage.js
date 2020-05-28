@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch, useHistory } from "react-router-dom";
 
 import Button from './Button';
-import Ginger from './MainPageComponents/Ginger';
-import Ginseng from './MainPageComponents/Ginseng';
-import Kombucha from './MainPageComponents/Kombucha';
+import About from './MainPageComponents/About';
+import Now from './MainPageComponents/Now';
+import Cv from './MainPageComponents/Cv';
 import Thoughts from './MainPageComponents/Thoughts';
 
 
@@ -23,9 +23,9 @@ const history = useHistory();
         </nav>
 
         <Switch>
-          <Route path="/main/ginger" render={(routerProps) => <Ginger routerProps={routerProps}/>}></Route>
-          <Route path="/main/ginseng" render={(routerProps) => <Ginseng routerProps={routerProps}/>} ></Route>
-          <Route path="/main/kombucha" render={(routerProps) => <Kombucha routerProps={routerProps}/>} ></Route>
+          <Route path="/main/ginger" render={(routerProps) => <About routerProps={routerProps}/>}></Route>
+          <Route path="/main/ginseng" render={(routerProps) => <Now routerProps={routerProps}/>} ></Route>
+          <Route path="/main/kombucha" render={(routerProps) => <Cv routerProps={routerProps}/>} ></Route>
           <Route path="/main/thoughts" render={(routerProps) => <Thoughts routerProps={routerProps}/>}  ></Route>
         </Switch>
         

@@ -68,6 +68,7 @@ const Thoughts = () => {
     return (
         <div className="thoughts main-page-content">
             <p>Write a thought. Any Thought. To inspire each other.</p>
+            <p>( ... working on the implementation ... )</p>
             <ThoughtForm thought={thought} handleFormChange={handleFormChange} handleFormSubmit={handleFormSubmit} />
             <ul className='thoughts-list'>
                 {
