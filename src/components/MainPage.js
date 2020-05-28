@@ -14,12 +14,12 @@ const history = useHistory();
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <div className="main-page">
-        <h2 className='title-h'>Thingies I do</h2>
+        <h2 className='title-h title-main'>Thingies I do</h2>
         <nav className='nav-main'>
-          <Link to="/main/ginger" className='nav-main-link'>Ginger</Link>
-          <Link to="/main/ginseng" className='nav-main-link'>Ginseng</Link>
-          <Link to="/main/kombucha" className='nav-main-link'>Kombucha</Link>
-          <Link to="/main/thoughts" className='nav-main-link'>Leave a Thought!</Link>
+          <Link to="/main/ginger" className='nav-main-link'>ABOUT</Link>
+          <Link to="/main/ginseng" className='nav-main-link'>NOW</Link>
+          <Link to="/main/kombucha" className='nav-main-link'>CURRICULUM</Link>
+          <Link to="/main/thoughts" className='nav-main-link'>TOUGHTS</Link>
         </nav>
 
         <Switch>
