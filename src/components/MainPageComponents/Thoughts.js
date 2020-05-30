@@ -67,8 +67,9 @@ const Thoughts = () => {
 
     return (
         <div className="thoughts main-page-content">
-            <p>Write a thought. Any Thought. To inspire each other.</p>
+            <p>You can leave a thought here. :)</p>
             <p>( ... working on the implementation ... )</p>
+            <p>( ... If you leave a thought now, it will be saved in a database, I will be able to see it :) the thoughts you left will be visible here soon. ... )</p>
             <ThoughtForm thought={thought} handleFormChange={handleFormChange} handleFormSubmit={handleFormSubmit} />
             <ul className='thoughts-list'>
                 {
