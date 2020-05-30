@@ -1,8 +1,8 @@
 :root {
   --greyDark: rgba(27, 27, 26, 0.8);
   --greyMiddle: rgba(49, 54, 42, 0.8);
-  --greyContent: #d5d6d3;
- 
+  --greyContent: #484946;
+  --hover: rgb(102, 155, 27);
 }
 
 
@@ -10,6 +10,7 @@ body {
   margin: 10vh 20vw;
   padding: 0;
   text-align: center;
+  color: var(--greyMiddle);
 }
 button {
   background-color: white;/*rgba(126, 197, 45, 0.8);*/
@@ -22,7 +23,7 @@ button {
   text-transform: uppercase;
 }
 button:hover {
-  color: var(--greyDark);
+  color: var(--hover);
 
 }
 
@@ -59,7 +60,7 @@ div .landing-page {
   font-weight: bold; 
 }
 .nav-main-link:hover {
-  color: var(--greyDark);
+  color: var(--hover);
 }
 
 .main-page-content {
@@ -67,6 +68,9 @@ div .landing-page {
   margin: 1rem auto;
   padding: 1rem;
   background-color: white;
+}
+.main-page-content p {
+  color: black;
 }
 
 
@@ -96,7 +100,6 @@ div .landing-page {
 }
 .thought-form-div > button {
   margin: 0;
-  background-color: var(--greyContent);
 }
 
 .thought-single {
@@ -118,6 +121,21 @@ div .landing-page {
   font-style: italic;
 }
 
+.input, .textarea {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+
+}
+
+/* ---------------------------- movies -------------------------------- */
+
+.movies-form {
+  display: grid;
+}
+.movies-label {
+  text-align: left;
+}
 /* ----------------------------------------------------------------- */
 
 @media only screen and (max-width: 1024px) {

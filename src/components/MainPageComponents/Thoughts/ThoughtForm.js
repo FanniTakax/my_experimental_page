@@ -5,9 +5,9 @@ const ThoughtForm = (props) => {
     return (
         <form className="thought-form" onSubmit={props.handleFormSubmit}>
             
-            <textarea name="thought" value={props.thought.thought} onChange={props.handleFormChange} placeholder="Write here a thought" rows="7" cols="10" required></textarea>
+            <textarea className="textarea" name="thought" value={props.thought.thought} onChange={props.handleFormChange} placeholder="Write here a thought" rows="7" cols="10" required></textarea>
             <div className="thought-form-div">
-                <input type="text" name="name" value={props.thought.name} onChange={props.handleFormChange} placeholder="Your name"  required/>
+                <input className="input thoughts-input" type="text" name="name" value={props.thought.name} onChange={props.handleFormChange} placeholder="Your name"  required/>
                 <button type="submit">Add Thought</button>
             </div>
         </form>
