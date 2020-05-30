@@ -2,7 +2,10 @@ import React from 'react';
 
 const About = () => {
     return (
-        <p className="main-page-content">:)</p>
+        <div className="main-page-content about">
+            <p>:)</p>
+        </div>
+        
     );
 }
 

@@ -74,7 +74,7 @@ const Thoughts = () => {
             <ul className='thoughts-list'>
                 {
                     tibidubu.map((item) => {
-                        return <ThoughtSingle key={item.id} name={item.name} thought={item.thought} />
+                        return <ThoughtSingle id={item.id} name={item.name} thought={item.thought} />
                     })
                 }
             </ul>
