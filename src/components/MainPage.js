@@ -15,7 +15,7 @@ const history = useHistory();
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <div className="main-page">
-        <h2 className='title-h title-main'>Fannni's Experimental Page</h2>
+        <h2 className='title-h title-main'>Fanni's Experimental Page</h2>
         <nav className='nav-main'>
           <Link to="/main/about" className='nav-main-link'>ABOUT</Link>
           <Link to="/main/now" className='nav-main-link'>NOW</Link>

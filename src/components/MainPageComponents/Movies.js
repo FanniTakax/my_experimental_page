@@ -45,11 +45,11 @@ const Movies = () => {
                         <p><small>RELEASE DATE: {movie.release_date}</small></p>
                         <p><small>RATING: {movie.vote_average}</small></p>
                         <p className="description">{movie.overview}</p>
-     
+                    
                     </div>
                 ))}
             </div>
-            <p>Using <a href="https://www.themoviedb.org">https://www.themoviedb.org</a> API</p>
+            <p><small>This app is using the <a href="https://www.themoviedb.org">https://www.themoviedb.org</a> API</small></p>
         </div>
     )
 }
