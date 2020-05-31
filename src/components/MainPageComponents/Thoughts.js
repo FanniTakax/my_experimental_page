@@ -58,10 +58,11 @@ const Thoughts = () => {
 
     
     const tibidubu = [
+        {id: '5', name: 'Fannni', thought: 'This page is constantly evolving, feel free to visit again soon :)'},
         {id: '1', name: 'Lalika', thought: 'vlami valahol valamikor'},
         {id: '2', name: 'Barbie', thought: 'where are my shoes'},
         {id: '3', name: 'Geza', thought: 'fekete bika pata kopog a patika epita koven'},
-        {id: '4', name: 'Simonka a cica', thought: 'Prrrrr prrp prrrr prrr grrrrr meeeeeooooooowwwwww wwwweeeeeiiii prrrrrr prrrrr'}
+        {id: '4', name: 'Simonka a cica', thought: 'Prrrrr prrp prrrr prrr grrrrr meeeeeooooooowwwwww wwwweeeeeiiii prrrrrr prrrrr'},
     ]
     console.log({tibidubu})
 
