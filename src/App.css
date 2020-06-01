@@ -82,6 +82,14 @@ div .landing-page {
 .main-page-content > p {
   color: black;
   font-size: 1.2rem;
+  text-align: left;
+}
+.main-page-content > .p-center {
+  text-align: center;
+}
+.main-page-content > img {
+  max-width: 70%;
+  margin: 4rem;
 }
 
 

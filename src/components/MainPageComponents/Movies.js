@@ -22,7 +22,7 @@ const Movies = () => {
     }
 
     const inputChangeHandler = (e) => {
-        setQuery(e.target.value);
+        setQuery(e.target.value)
     } 
 
     return (

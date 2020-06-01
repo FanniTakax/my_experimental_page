@@ -8,7 +8,7 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page">
-      <h1 className="title-h">You are on my experimental page!</h1>
+      <h1 className="title-h">You are on Fanni's experimental page!</h1>
       <Button buttonName={'Check it out!'} onClick={() => history.push('/main')} />
     </div>
   );
