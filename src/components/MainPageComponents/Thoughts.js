@@ -20,14 +20,14 @@ const Thoughts = () => {
                     })
                 })
             })   
+        console.log(array)
         return array
     }
     
     const [thoughtsArray, setThoughtsArray] = useState(getThoughtsArray)
 
     // After first render, load thought objects from the database
-    useEffect(() => {
-        console.log({thoughtsArray})    
+    useEffect(() => {   
         console.log(thoughtsArray)
     }, [])
     
@@ -64,7 +64,7 @@ const Thoughts = () => {
         {id: '3', name: 'Geza', thought: 'fekete bika pata kopog a patika epita koven'},
         {id: '4', name: 'Simonka a cica', thought: 'Prrrrr prrp prrrr prrr grrrrr meeeeeooooooowwwwww wwwweeeeeiiii prrrrrr prrrrr'},
     ]
-    console.log({tibidubu})
+    console.log(tibidubu)
 
     return (
         <div className="thoughts main-page-content">
@@ -74,7 +74,7 @@ const Thoughts = () => {
             <ThoughtForm thought={thought} handleFormChange={handleFormChange} handleFormSubmit={handleFormSubmit} />
             <ul className='thoughts-list'>
                 {
-                    tibidubu.map((item) => {
+                    thoughtsArray.forEach((item) => {
                         return <ThoughtSingle id={item.id} name={item.name} thought={item.thought} />
                     })
                 }
