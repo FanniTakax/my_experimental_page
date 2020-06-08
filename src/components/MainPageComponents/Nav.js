@@ -15,6 +15,7 @@ const Burgernav = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding: 1rem;
 
     background-color: white;
     border: ${({ open }) => open ? 'solid 1px rgba(148, 150, 145, 0.8);' : 'none'};
@@ -24,6 +25,7 @@ const Burgernav = styled.div`
         flex-direction: column;
         justify-content: space-around;
         align-items: flex-start;
+        margin-top: 1rem;
     }
 
     @media only screen and (max-width: 600px) {
