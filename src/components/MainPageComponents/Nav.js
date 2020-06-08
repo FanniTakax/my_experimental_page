@@ -10,21 +10,24 @@ import Movies from './Movies';
 
 const Burgernav = styled.div`
     max-width: 14rem;
-    position: relative;
-    float: right;
+    position: absolute;
+    z-index: 20;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    height: 99%;
+    align-items: flex-start;
 
+    background-color: white;
+    border: ${({ open }) => open ? 'solid 1px rgba(148, 150, 145, 0.8);' : 'none'};
+    
     nav {
         display: none;
         flex-direction: column;
         justify-content: space-around;
-        align-items: flex-end;
+        align-items: flex-start;
     }
 
     @media only screen and (max-width: 600px) {
+        
         nav {
             display: ${({ open }) => open ? 'flex' : 'none'};
         }

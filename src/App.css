@@ -197,8 +197,14 @@ div .landing-page {
   body {
     margin: 2vh 0;
   }
+  .title-h {
+    border-bottom: none;
+  }
   .nav-main {
     display: none;
+  }
+  .main-page-content {
+    margin-top: 5rem;
   }
   .thought-form {
     padding: 1rem;
@@ -218,6 +224,5 @@ div .landing-page {
   }
   .thought-form-div > button {
     margin: 0;
-    background-color: var(--greyContent);
   }
 }
