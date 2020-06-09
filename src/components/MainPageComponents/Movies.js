@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import MovieCard from './Movies/MovieCard'
+import moviedb from './moviedb-logo.svg'
 
 const Movies = () => {
     const [query, setQuery] = useState('')
@@ -40,7 +41,7 @@ const Movies = () => {
                     <MovieCard movie={movie} />
                 ))}
             </div>
-            <p><small>This app is using the <a href="https://www.themoviedb.org">https://www.themoviedb.org</a> API</small></p>
+            <p className='p-center'><small>This app is using the <a href="https://www.themoviedb.org">https://www.themoviedb.org</a> API</small></p>
         </div>
     )
 }

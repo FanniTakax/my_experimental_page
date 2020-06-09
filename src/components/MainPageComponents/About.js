@@ -15,7 +15,6 @@ const About = () => {
             </p>
             <img src={mimi_and_fanni} alt="Mimi and Me" />
         </div>
-        
     );
 }
 
