@@ -24,7 +24,11 @@ const Thoughts = () => {
         return array
     }
     
-    const [thoughtsArray, setThoughtsArray] = useState(getThoughtsArray)
+    const [thoughtsArray, setThoughtsArray] = useState([{id: '101', name: "Fannni", thought: "Loading thoughts..."}])
+
+
+    // ha a getThoughtsArray()-bol returnelt array nem ures, akkor setThoughtsArray(getThoughtsArray()) ---------- hol tegyem fel ezt a kerdest?
+
         
     // props sent to ThoughtsForm ------------------------------------------------------------------------
     const [thought, setThought] = useState({
@@ -50,14 +54,6 @@ const Thoughts = () => {
     }
     // ---------------------------------------------------------------------------------------------------------
 
-    
-    const tibidubu = [
-        {id: '5', name: 'Fannni', thought: 'This page is constantly evolving, feel free to visit again soon :)'},
-        {id: '1', name: 'Lalika', thought: 'vlami valahol valamikor'},
-        {id: '2', name: 'Barbie', thought: 'where are my shoes'},
-        {id: '3', name: 'Geza', thought: 'fekete bika pata kopog a patika epita koven'},
-        {id: '4', name: 'Simonka a cica', thought: 'Prrrrr prrp prrrr prrr grrrrr meeeeeooooooowwwwww wwwweeeeeiiii prrrrrr prrrrr'},
-    ]
 
     return (
         <div className="thoughts main-page-content">
