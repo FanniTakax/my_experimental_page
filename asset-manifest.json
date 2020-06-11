@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/my_experimental_page/static/css/main.279f2bae.chunk.css",
-    "main.js": "/my_experimental_page/static/js/main.08c2611f.chunk.js",
-    "main.js.map": "/my_experimental_page/static/js/main.08c2611f.chunk.js.map",
+    "main.css": "/my_experimental_page/static/css/main.c261e5a2.chunk.css",
+    "main.js": "/my_experimental_page/static/js/main.bd95b4e1.chunk.js",
+    "main.js.map": "/my_experimental_page/static/js/main.bd95b4e1.chunk.js.map",
     "runtime-main.js": "/my_experimental_page/static/js/runtime-main.d1f48c7d.js",
     "runtime-main.js.map": "/my_experimental_page/static/js/runtime-main.d1f48c7d.js.map",
-    "static/js/2.511a662f.chunk.js": "/my_experimental_page/static/js/2.511a662f.chunk.js",
-    "static/js/2.511a662f.chunk.js.map": "/my_experimental_page/static/js/2.511a662f.chunk.js.map",
+    "static/js/2.c5cdf09b.chunk.js": "/my_experimental_page/static/js/2.c5cdf09b.chunk.js",
+    "static/js/2.c5cdf09b.chunk.js.map": "/my_experimental_page/static/js/2.c5cdf09b.chunk.js.map",
     "index.html": "/my_experimental_page/index.html",
-    "precache-manifest.d55019e3f1d165a3ed1148cada65cf98.js": "/my_experimental_page/precache-manifest.d55019e3f1d165a3ed1148cada65cf98.js",
+    "precache-manifest.7878ab3fdbb27494b8dfce48b527458d.js": "/my_experimental_page/precache-manifest.7878ab3fdbb27494b8dfce48b527458d.js",
     "service-worker.js": "/my_experimental_page/service-worker.js",
-    "static/css/main.279f2bae.chunk.css.map": "/my_experimental_page/static/css/main.279f2bae.chunk.css.map",
-    "static/js/2.511a662f.chunk.js.LICENSE.txt": "/my_experimental_page/static/js/2.511a662f.chunk.js.LICENSE.txt",
-    "static/media/mimi_and_fanni.jpg": "/my_experimental_page/static/media/mimi_and_fanni.b35e2ec3.jpg"
+    "static/css/main.c261e5a2.chunk.css.map": "/my_experimental_page/static/css/main.c261e5a2.chunk.css.map",
+    "static/js/2.c5cdf09b.chunk.js.LICENSE.txt": "/my_experimental_page/static/js/2.c5cdf09b.chunk.js.LICENSE.txt",
+    "static/media/mimi_and_fanni.jpg": "/my_experimental_page/static/media/mimi_and_fanni.b35e2ec3.jpg",
+    "static/media/moviedb-logo.svg": "/my_experimental_page/static/media/moviedb-logo.86ff7c17.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d1f48c7d.js",
-    "static/js/2.511a662f.chunk.js",
-    "static/css/main.279f2bae.chunk.css",
-    "static/js/main.08c2611f.chunk.js"
+    "static/js/2.c5cdf09b.chunk.js",
+    "static/css/main.c261e5a2.chunk.css",
+    "static/js/main.bd95b4e1.chunk.js"
   ]
 }
