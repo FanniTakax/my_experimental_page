@@ -6,30 +6,28 @@ import _ from 'lodash';
 
 const Thoughts = () => {
     
-     
+    const [thoughtsArray, setThoughtsArray] = useState([])
+
     // Get thoughts data from database
     const getThoughtsArray = () => {
-        let array = []
+        const array = []
         database.ref('thoughts')
             .once('value')
             .then((dataSnapshot) => { 
                 dataSnapshot.forEach((thought) => {
-                    array.push({
-                        id: thought.key,
-                        ...thought.val()
-                    })
+                    array.push({id: thought.key,...thought.val()})
                 })
-            })   
-        
-        return array
+            })
+        setThoughtsArray(array)    
     }
-    
-    const [thoughtsArray, setThoughtsArray] = useState([{id: '101', name: "Fannni", thought: "Loading thoughts..."}])
 
 
     // ha a getThoughtsArray()-bol returnelt array nem ures, akkor setThoughtsArray(getThoughtsArray()) ---------- hol tegyem fel ezt a kerdest?
-
+    useEffect(() => {
+        getThoughtsArray()
+    }, [])
         
+    console.log(thoughtsArray)
     // props sent to ThoughtsForm ------------------------------------------------------------------------
     const [thought, setThought] = useState({
         thought: '',
@@ -64,7 +62,7 @@ const Thoughts = () => {
             <ul className='thoughts-list'>
                 {
                     thoughtsArray.map((thought) => {
-                        return <ThoughtSingle id={thought.id} name={thought.name} thought={thought.thought} />
+                        return <ThoughtSingle key={thought.id} name={thought.name} thought={thought.thought} />
                     })
                 }
             </ul>
