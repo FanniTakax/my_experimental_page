@@ -53,7 +53,6 @@ const Thoughts = () => {
             thought: thought,
             name: name
         })
-        watchAddThoughts()
     }
     const handleFormChange = (e) => {
         setThought({...thought, [e.target.name]: e.target.value})
