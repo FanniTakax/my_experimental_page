@@ -31,10 +31,9 @@ const Thoughts = () => {
     
     console.log('new render')
 
+    // NEXT STEP to be implemented. so any time the form is submitted, the newly added thoughts automatically renders at the end of the list of thoughts
     const watchAddThoughts = () => {
-        database.ref('thoughts').on('value', (dataSnapshot, prevChildKey) => {
-            setThoughtsArray([...thoughtsArray, {id: dataSnapshot.key,...dataSnapshot.val()}])
-        })
+       
     }
 
 
