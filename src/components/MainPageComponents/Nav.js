@@ -52,7 +52,7 @@ const Nav = () => {
                 <Link to="/main/about" className='nav-main-link'>ABOUT</Link>
                 <Link to="/main/now" className='nav-main-link'>NOW</Link>
                 <Link to="/main/curriculum" className='nav-main-link'>CURRICULUM</Link>
-                <Link to="/main/thoughts" className='nav-main-link'>TOUGHTS</Link>
+                <Link to="/main/thoughts" className='nav-main-link'>THOUGHTS</Link>
                 <Link to="/main/movies" className='nav-main-link'>MOVIES</Link>
             </nav>
             <Burgernav open={open} onClick={() => setOpen(!open)}>

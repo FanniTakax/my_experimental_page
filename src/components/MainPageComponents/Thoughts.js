@@ -6,28 +6,43 @@ import _ from 'lodash';
 
 const Thoughts = () => {
     
-    const [thoughtsArray, setThoughtsArray] = useState([])
+    const [pushed, setPushed] = useState(false)
 
     // Get thoughts data from database
     const getThoughtsArray = () => {
         const array = []
         database.ref('thoughts')
             .once('value')
-            .then((dataSnapshot) => { 
-                dataSnapshot.forEach((thought) => {
-                    array.push({id: thought.key,...thought.val()})
-                })
-            })
-        setThoughtsArray(array)    
+            .then(dataSnapshot => { 
+                if(dataSnapshot) {
+                    dataSnapshot.forEach((thought) => {
+                        array.push({id: thought.key,...thought.val()})
+                        console.log('pushing')
+                    })
+                    setPushed(true)
+                } else {
+                    array.push({id: '000', name: 'Fanni', thought: 'Couldn\'t load thoughts...'})
+                }
+            })   
+        return array   
+    }
+
+    const [thoughtsArray, setThoughtsArray] = useState(getThoughtsArray())
+    
+    console.log('new render')
+
+    const watchAddThoughts = () => {
+        database.ref('thoughts').on('value', (dataSnapshot, prevChildKey) => {
+            setThoughtsArray([...thoughtsArray, {id: dataSnapshot.key,...dataSnapshot.val()}])
+        })
     }
 
 
-    // ha a getThoughtsArray()-bol returnelt array nem ures, akkor setThoughtsArray(getThoughtsArray()) ---------- hol tegyem fel ezt a kerdest?
     useEffect(() => {
-        getThoughtsArray()
-    }, [])
-        
-    console.log(thoughtsArray)
+        console.log('useEffect on thoughtsArray change')
+    }, [thoughtsArray])
+
+
     // props sent to ThoughtsForm ------------------------------------------------------------------------
     const [thought, setThought] = useState({
         thought: '',
@@ -38,6 +53,7 @@ const Thoughts = () => {
             thought: thought,
             name: name
         })
+        watchAddThoughts()
     }
     const handleFormChange = (e) => {
         setThought({...thought, [e.target.name]: e.target.value})
@@ -56,8 +72,7 @@ const Thoughts = () => {
     return (
         <div className="thoughts main-page-content">
             <p className="p-center">You can leave a thought here</p>
-            <p className="p-center" >// ... working on the implementation ... //</p>
-            <p className="p-center"><small>If you leave a thought now, it will be saved in a database. They will be visible here soon.</small></p>
+            <p className="p-center" >Inspire and get inspired</p>
             <ThoughtForm thought={thought} handleFormChange={handleFormChange} handleFormSubmit={handleFormSubmit} />
             <ul className='thoughts-list'>
                 {
