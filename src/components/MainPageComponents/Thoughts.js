@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import ThoughtForm from './Thoughts/ThoughtForm';
 import database from '../../firebase/firebase';
 import ThoughtSingle from './Thoughts/ThoughtSingle';
-import _ from 'lodash';
+
+import leaves from '../../img/leaf.jpg'
 
 const Thoughts = () => {
     
@@ -16,10 +17,9 @@ const Thoughts = () => {
             .then(dataSnapshot => { 
                 if(dataSnapshot) {
                     dataSnapshot.forEach((thought) => {
-                        array.push({id: thought.key,...thought.val()})
-                        console.log('pushing')
+                        array.unshift({id: thought.key,...thought.val()})
                     })
-                    setPushed(true)
+                    setPushed(!pushed)
                 } else {
                     array.push({id: '000', name: 'Fanni', thought: 'Couldn\'t load thoughts...'})
                 }
@@ -28,18 +28,12 @@ const Thoughts = () => {
     }
 
     const [thoughtsArray, setThoughtsArray] = useState(getThoughtsArray())
-    
-    console.log('new render')
+   // const [newThoughtAdded,  setNewThughtAdded] = useState(false)
 
     // NEXT STEP to be implemented. so any time the form is submitted, the newly added thoughts automatically renders at the end of the list of thoughts
     const watchAddThoughts = () => {
        
     }
-
-
-    useEffect(() => {
-        console.log('useEffect on thoughtsArray change')
-    }, [thoughtsArray])
 
 
     // props sent to ThoughtsForm ------------------------------------------------------------------------
@@ -49,9 +43,12 @@ const Thoughts = () => {
     })
     const addThought = (thought, name) => {
         database.ref('thoughts').push({
-            thought: thought,
-            name: name
+            thought,
+            name
         })
+        setThoughtsArray([{thought, name, id: 'key_temporal'}, ...thoughtsArray])
+        console.log(thoughtsArray)
+        setPushed(!pushed)
     }
     const handleFormChange = (e) => {
         setThought({...thought, [e.target.name]: e.target.value})
@@ -71,6 +68,7 @@ const Thoughts = () => {
         <div className="thoughts main-page-content">
             <p className="p-center">You can leave a thought here</p>
             <p className="p-center" >Inspire and get inspired</p>
+            <img className="img-leaves" src={leaves} />
             <ThoughtForm thought={thought} handleFormChange={handleFormChange} handleFormSubmit={handleFormSubmit} />
             <ul className='thoughts-list'>
                 {
@@ -85,3 +83,18 @@ const Thoughts = () => {
 }
 
 export default Thoughts;
+
+/* 
+    const [show, setShow] = useState(false);
+
+    return (
+        <div>
+        <button onClick={() => setShow(!show)}>Show Menu</button>
+        // Mounted with show = true and unomunted with show = false
+        {show && <MenuDropdown />}
+        </div>
+    );
+*/
+
+
+

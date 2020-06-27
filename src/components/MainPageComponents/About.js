@@ -13,7 +13,7 @@ const About = () => {
             </p>
             <p>This is a simple React website. ...
             </p>
-            <img src={mimi_and_fanni} alt="Mimi and Me" />
+            <img className="img-mimi" src={mimi_and_fanni} alt="Mimi and Me" />
         </div>
     );
 }
